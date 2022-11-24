@@ -1,6 +1,6 @@
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
-const Expense = (pros) => {
+const ExpenseItem = (pros) => {
   return (
     <div className='expense-item'>
       <ExpenseDate date={pros.item.date} />
@@ -12,4 +12,4 @@ const Expense = (pros) => {
   );
 };
 
-export default Expense;
+export default ExpenseItem;
