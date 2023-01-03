@@ -1,4 +1,5 @@
 import Expense from './components/Expense/Expense';
+import NewExpense from './components/NewExpense/NewExpense';
 function App() {
   const DUMMY_EXPENSE = [
     {
@@ -26,7 +27,17 @@ function App() {
       price: 224.67,
     },
   ];
-  return <Expense expenseItems={DUMMY_EXPENSE}></Expense>;
+
+  const addExpenseHandler = (expense) => {
+    console.log(expense);
+  };
+
+  return (
+    <div>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expense expenseItems={DUMMY_EXPENSE}></Expense>;
+    </div>
+  );
 }
 
 export default App;
