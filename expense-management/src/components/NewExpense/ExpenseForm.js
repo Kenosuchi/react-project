@@ -4,7 +4,6 @@ const ExpenseForm = (pros) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
-
   const submitHandler = (event) => {
     event.preventDefault();
     const expenseData = {
@@ -61,8 +60,13 @@ const ExpenseForm = (pros) => {
           ></input>
         </div>
       </div>
-      <div className='new-expense__actions'>
-        <button type='summit'>Add Expense</button>
+      <div>
+        <div className='new-expense__actions'>
+          <button type='button' onClick={pros.onCancel}>
+            Cancel
+          </button>
+          <button type='summit'>Add Expense</button>
+        </div>
       </div>
     </form>
   );
